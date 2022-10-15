@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
-import { queryEmailGetEmail, queryInsertUser, queryUserGetEmail, queryEmailGetPassword } from './queries';
+import { queryEmailGetEmail, queryInsertUser, queryUserGetEmail, queryEmailGetPassword } from '../reposityory/authQueries.js';
 
 
 dotenv.config();
