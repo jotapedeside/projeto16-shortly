@@ -33,7 +33,7 @@ CREATE TABLE "public"."urls" (
 );
 
 
-ALTER TABLE public.urls OWNER TO postgres;
+-- ALTER TABLE public.urls OWNER TO postgres;
 
 --
 -- Name: urlsUsers; Type: TABLE; Schema: public; Owner: postgres
@@ -46,7 +46,7 @@ CREATE TABLE "public"."urlsUsers" (
 );
 
 
-ALTER TABLE public."urlsUsers" OWNER TO postgres;
+-- ALTER TABLE public."urlsUsers" OWNER TO postgres;
 
 --
 -- Name: urlsUsers_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -61,7 +61,7 @@ CREATE SEQUENCE "public"."urlsUsers_id_seq"
     CACHE 1;
 
 
-ALTER TABLE public."urlsUsers_id_seq" OWNER TO postgres;
+-- ALTER TABLE public."urlsUsers_id_seq" OWNER TO postgres;
 
 --
 -- Name: urlsUsers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -83,7 +83,7 @@ CREATE SEQUENCE "public"."urls_id_seq"
     CACHE 1;
 
 
-ALTER TABLE public.urls_id_seq OWNER TO postgres;
+-- ALTER TABLE public.urls_id_seq OWNER TO postgres;
 
 --
 -- Name: urls_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -105,7 +105,7 @@ CREATE TABLE "public"."users" (
 );
 
 
-ALTER TABLE public.users OWNER TO postgres;
+-- ALTER TABLE public.users OWNER TO postgres;
 
 --
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -120,7 +120,7 @@ CREATE SEQUENCE "public"."users_id_seq"
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO postgres;
+-- ALTER TABLE public.users_id_seq OWNER TO postgres;
 
 --
 -- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
