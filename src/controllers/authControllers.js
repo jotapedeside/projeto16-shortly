@@ -12,6 +12,10 @@ const jwtExpire = { expiresIn: EXPIRE_TIME };
 //Middleware Checks
 export const actuallyCheckIfEmailAlreadyExists = async (email) => {
   const { rows: user } = await connection.query(queryEmailGetEmail, [email]);
+  if (user && user.length !== 0) {
+    return true;
+  }
+  return false;
 };
 
 export const actuallyInsertUser = async (user) => {
@@ -27,7 +31,6 @@ export const actuallyCheckPassword = async (email) => {
   const user = await connection.query(queryEmailGetPassword, [email]);
   return user[0].password;
 };
-
 
 //Actual execution of HTTP Methods
 export const signUp = async (req, res) => {

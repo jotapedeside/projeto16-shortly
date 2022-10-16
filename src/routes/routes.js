@@ -4,8 +4,9 @@ import { Router } from 'express';
 import { validateSignUp, checkEmailAlreadyExists, validateSignIn, checkEmailPassword } from '../middlewares/authMiddlewares.js';
 import { signUp, signIn } from '../controllers/authControllers.js';
 
-//User
-
+//Url
+import { validateUrl, validateHeaderModel, validateToken, validateId, validateParams, validateShortUrl, validateExistence, validateTokenUser } from '../middlewares/urlMiddlewares.js';
+import { postShortUrl, getShortUrl, getShortUrlStats, deleteUrl } from '../controllers/urlControllers.js';
 
 const router = Router();
 
@@ -13,7 +14,11 @@ const router = Router();
 router.post('/signup', validateSignUp, checkEmailAlreadyExists, signUp);
 router.post('/signin', validateSignIn, checkEmailPassword, signIn);
 
-//User
+//Url
+router.post('/urls/shorten', validateUrl, validateHeaderModel, validateToken, postShortUrl);
+router.get('/urls/:shortUrl', validateId, validateParams, getShortUrl);
+router.get('/urls/open/:shortUrl', validateShortUrl, validateExistence, getShortUrlStats);
+router.delete('/urls/:id', validateId, validateHeaderModel, validateToken, validateParams, validateTokenUser, deleteUrl);
 
 
 export default router;
